@@ -30,10 +30,11 @@ $ ->
       'url':url
       'dataType':'json'
       'beforeSend':->
+        ###ajax通信前の処理###
         playerInfo.hide()
         loadingBox.show()
-      
         return
+      ###成功時の処理###
       'success':(data ,status ,xhr) ->
 
         jsonData = data
@@ -64,6 +65,7 @@ $ ->
           return
         ,1500
         return
+      ###失敗時の処理###
       'error'   :(XMLHttpRequest ,textStatus, errorThrown) ->
         loadingBox.hide()
         alert('なんらかのエラーが発生しました。'+textStatus)
