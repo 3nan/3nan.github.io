@@ -1,9 +1,11 @@
 $ ->
 
-  ###
+  ### 
+  #
   # Json データからジョジョの情報を取ってくる。
   # プログラムで動的に取ってこれないのですでに作成されているjsonファイルしか取れないが
   # phpでやってるのはDBなどからデータをとってきてそれを動的にjsonファイルを作成しているだけである
+  #
   ###
 
   ###
@@ -16,9 +18,12 @@ $ ->
     'display':'block'
     'margin':'50px auto 10px'
   $('div.contentViewer').css('height':600)
-  
-  $('.callJojoAjax').click ->
-    
+
+  ###
+  # リンクをクリックすると主人公の画像、名前、台詞をサーバーから取得する
+  ###
+  $('a.callJojoAjax').click ->
+    ###URLを取得する####
     url = "json/#{$(this).data('jojo')}.json"
     ### ajax通信開始 ###
     $.ajax
@@ -30,14 +35,13 @@ $ ->
       
         return
       'success':(data ,status ,xhr) ->
-        
+
         jsonData = data
-        loadingBox.hide()
         ###画像を追加###
         playerInfo.find('li.img').append ->
           jqImg = $(@).find('img').css('width':300)
           return $('<img/>').css('width':300) if jqImg == null || jqImg.length == 0
-        
+
         ###
         # 取得したJsonを加工して表示する
         # プリロード
@@ -52,13 +56,11 @@ $ ->
           ###名前と台詞セット###
           playerInfo.find('li.name span.content').text(jsonData.name)
           playerInfo.find('li.serif span.content').html(jsonData.discription)
-        
-          ###表示領域とローディング領域を表示・非表示###
 
-          
+          ###表示領域とローディング領域を表示・非表示###
           playerInfo.show()
           loadingBox.hide()
-          
+
           return
         ,1500
         return
@@ -67,7 +69,8 @@ $ ->
         alert('なんらかのエラーが発生しました。'+textStatus)
         console.log XMLHttpRequest
         return
-    ###falseを返す###
+        
+    ###falseを返すことでクリック時のよけいな画面移動を抑える###
     return false
   return
   
