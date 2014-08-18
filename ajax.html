@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="3nan.github.io : web">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/common.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <title>Tecotec新人勉強会:Javascriptのデバッグについてついでにjquery,coffeescritも・・</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/3nan">View on GitHub</a>
+
+          <h1 id="project_title">Tecotec新人勉強会</h1>
+          <h2 id="project_tagline">ajax通信について説明実践するためのページ？・・・ついでにjquery,coffeescritも・・</h2>
+
+        </header>
+     
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+       
+         <p>このjavascriptはCoffeeScriptというPyhton、Rubyライクにjavascriptが記述できる言語で記述している</p>
+         <a href="https://dl.dropboxusercontent.com/u/222717258/tecotecnew/trunk/coffee/ajax.coffee">このjavascriptを生み出したソースはこちらから</a><br/>
+          <a href="https://dl.dropboxusercontent.com/u/222717258/tecotecnew/trunk/index.html">Index Pageへ</a>
+        
+         <h3>リストをクリックしたらjosnファイルを読み込んで詳細を表示するjavascript</h3><p>COFFEE SCRIPTを使って記述</p>
+         <p>イベント発生時にサーバーと通信してデータを読み込む。クリックだけではなく、スライド、タップ等のイベント時にも同じ方法で実装できる</p>
+         
+         <p>画像、名前、台詞をサーバーにあるjsonファイルを読み込んで表示する読み込み失敗時はエラーが変える。</p>
+         <a data-jojo="jonathan" class="callJojoAjax" href="#">ajax通信(json)ジョナサンジョースター</a>:<a href="json/jonathan.json">jsonファイル</a><br/>
+         <a data-jojo="joseph" class="callJojoAjax" href="#">ajax通信(json)ジョセフジョースター</a>:<a href="json/joseph.json">jsonファイル</a><br/>
+         <a data-jojo="jotaro" class="callJojoAjax" href="#">ajax通信(json)空条承太郎</a>:<a href="json/jotaro.json">jsonファイル</a><br/>
+         <a data-jojo="josuke" class="callJojoAjax" href="#">ajax通信(json)東方丈助</a>:<a href="json/josuke.json">jsonファイル</a><br/>
+         <div class="contentViewer" style="font-color:#fff;">
+             <div class="loadingBox">
+                 <p class="loading">loading......</p>
+             </div>
+             <ul class="playerInfo" style="display:none;">
+                 <li class="img"></li>
+                 <li class="name"><span class="title">名前:</span><span class="content"></span></li>
+                 <li class="serif"><span class="title">台詞:</span><span class="content"></span></li>
+             </ul>
+        </div>
+     
+
+ 
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://dl.dropboxusercontent.com/u/222717258/tecotecnew/trunk/html.html">Index Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+

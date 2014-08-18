@@ -21,7 +21,7 @@
           <a id="forkme_banner" href="https://github.com/3nan">View on GitHub</a>
 
           <h1 id="project_title">Tecotec新人勉強会</h1>
-          <h2 id="project_tagline">Javascriptのデバッグについて・・・ついでにjquery,coffeescritも・・</h2>
+          <h2 id="project_tagline">Javascriptのデバッグについて説明実践するためのページ？・・・ついでにjquery,coffeescritも・・</h2>
 
         </header>
      
@@ -30,6 +30,11 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+         <p>リストをクリックすするとタイトルに対応する文言や画像が表示されるjavascriptを３つほど違うやり方で実装している・</p>
+         <p>このjavascriptはCoffeeScriptというPyhton、Rubyライクにjavascriptが記述できる言語で記述している</p>
+         <a href="https://dl.dropboxusercontent.com/u/222717258/tecotecnew/trunk/coffee/index.coffee">このjavascriptを生み出したソースはこちらから</a><br/>
+         <a href="https://dl.dropboxusercontent.com/u/222717258/tecotecnew/trunk/ajax.html">Ajax Pageへ</a>
+        
         <h3>リストをクリックしたらspan.contentの中身が表示されるjavascript </h3><p>COFFEE SCRIPTを使って記述</p>
         <div class="contentViewer" style="font-color:#fff;">
           <p></P>
@@ -44,20 +49,20 @@
 
         </ul>
 
-        <h3>リストのタイトルをクリックしたら、
-  span.titleのdata-contentの値を表示するjavascript</h3><p>COFFEE SCRIPTを使って記述</p>
+        <h3>リストをクリックしたら、
+  span.titleのdata-contentの値を表示し、リストにクリックされた回数を表示するjavascript</h3><p>COFFEE SCRIPTを使って記述</p>
         <div class="contentViewer2" style="font-color:#fff;">
           <p></P>
         </div>
 
         <ul class="jsSample2">
-          <li><span data-id="jsSample2Span1" data-selected-count="0" class='title' data-content=" 明日からがんばるんじゃない…今日…今日だけがんばるんだっ…！今日をがんばった者…今日をがんばり始めた者にのみ…明日が来るんだよ…！">福本名言：大槻</li>
-          <li><span data-id="jsSample2Span2" data-selected-count="0" class='title' data-content="疑ってるうちはまだしもそれを口にしたら…戦争だろうがっ！">福本名言：カイジ</span>
-          <li><span data-id="jsSample2Span3" data-selected-count="0" class='title' data-content="ピンチだけど…チャンスッ…">福本名言：カイジその２</span>
+          <li><span data-id="jsSample2Span1" data-title="福本名言：大槻" data-selected-count="0" class='title' data-content=" 明日からがんばるんじゃない…今日…今日だけがんばるんだっ…！今日をがんばった者…今日をがんばり始めた者にのみ…明日が来るんだよ…！">福本名言：大槻</span></li>
+          <li><span data-id="jsSample2Span2" data-title="福本名言：カイジ"  data-selected-count="0" class='title' data-content="疑ってるうちはまだしもそれを口にしたら…戦争だろうがっ！">福本名言：カイジ</span>
+          <li><span data-id="jsSample2Span3" data-title="福本名言：カイジその２" data-selected-count="0" class='title' data-content="ピンチだけど…チャンスッ…">福本名言：カイジその２</span>
         </ul>
 
-       <h3>リストのタイトルをクリックしたら、
-  span.titleのdata-imgの値を表示するjavascript</h3><p>COFFEE SCRIPTを使って記述</p>
+       <h3>リストをクリックしたら、
+  span.titleのdata-imgのにあるURLの画像を表示するjavascript</h3><p>COFFEE SCRIPTを使って記述</p>
         <div class="contentViewer3" style="font-color:#fff;">
           <p></P>
         </div>
@@ -75,7 +80,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with <a href="https://dl.dropboxusercontent.com/u/222717258/tecotecnew/trunk/ajax.html">Ajax Pages</a></p>
       </footer>
     </div>
 
