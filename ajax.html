@@ -8,9 +8,20 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/common.css">
+     <link rel="stylesheet" type="text/css" media="screen" href="css/idangerous.swiper.css">
+         <style>
+.swiper-container, .swiper-slide {
+  width: 600px;
+  height: 400px;
+}
+
+    </style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/idangerous.swiper.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
+     <script type="text/javascript" src="js/ajax.swipe.js"></script>
     <title>Tecotec新人勉強会:Javascriptのデバッグについてついでにjquery,coffeescritも・・</title>
+
   </head>
 
   <body>
@@ -42,6 +53,8 @@
          <p>イベント発生時にサーバーと通信してデータを読み込む。クリックだけではなく、スライド、タップ等のイベント時にも同じ方法で実装できる</p>
          
          <p>画像、名前、台詞をサーバーにあるjsonファイルを読み込んで表示する<br/>読み込み失敗時はエラーがかええる。</p>
+
+         
          <a data-jojo="jonathan" class="callJojoAjax" href="#">ajax通信(json)ジョナサンジョースター</a>:<a href="json/jonathan.json">jsonファイル</a><br/>
          <a data-jojo="joseph" class="callJojoAjax" href="#">ajax通信(json)ジョセフジョースター</a>:<a href="json/joseph.json">jsonファイル</a><br/>
          <a data-jojo="jotaro" class="callJojoAjax" href="#">ajax通信(json)空条承太郎</a>:<a href="json/jotaro.json">jsonファイル</a><br/>
@@ -56,7 +69,45 @@
                  <li class="serif"><span class="title">台詞:</span><span class="content"></span></li>
              </ul>
         </div>
-     
+     <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!--First Slide-->
+            <div data-id="spring" class="jonathan swiper-slide"> 
+                
+            </div>
+      
+            <!--Second Slide-->
+            <div data-id="summer" class="swiper-slide joseph">
+                
+            </div>
+      
+            <!--Third Slide-->
+            <div data-id="automn" class="swiper-slide jotaro"> 
+               
+            </div>
+             <div data-id="winter" class="swiper-slide jotaro"> 
+               
+            </div>
+            <!--Etc..-->
+        </div>
+    </div>
+    <div class='profile'>
+        <dl class='name'>
+            <dt>NAME</dt>
+            <dd></dd>
+        </dl>
+        <dl class='description'>
+            <dt>SERIHU</dt>
+            <dd></dd>
+        </dl>
+    </div>
+
+
+ 
+
+
+      
+
 
  
 
